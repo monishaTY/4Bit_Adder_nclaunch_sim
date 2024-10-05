@@ -118,7 +118,7 @@ or
 
 	To perform the function simulation, the following three steps are involved Compilation, Elaboration and Simulation. 
 
-![image](https://github.com/user-attachments/assets/56ecc66e-952d-4c34-9e6c-aa9d2f958d86)
+![image](https://github.com/user-attachments/assets/3ff13f30-0665-45dd-b40f-c3a27efcda7a)
 
 
 
@@ -139,7 +139,8 @@ i.e Cadence IES command for compile: ncverilog +access+rwc -compile fa.v
 
 Worklib is the directory where all the compiled codes are stored while Snapshot will have output of elaboration which in turn goes for simulation
 
-![image](https://github.com/user-attachments/assets/e099d872-3c27-4665-9225-ecab0824a460)
+![image](https://github.com/user-attachments/assets/f32dc5e2-e766-4f92-94d0-38508d2abcab)
+
 
 	After compilation it will come under worklib you can see in right side window
 
@@ -162,7 +163,7 @@ i.e Cadence IES command for compile: ncverilog +access+rwc -compile fa.v
    
 	After elaboration the file will come under snapshot. Select the test bench and elaborate it.
 
-![image](https://github.com/user-attachments/assets/e810b121-e27d-4488-a135-f8ac9dab8993)
+![image](https://github.com/user-attachments/assets/c2232794-399d-48e1-8041-b770906cc980)
 
 
 ## Step 3: Simulation: – Simulate with the given test vectors over a period of time to observe the output behaviour. 
