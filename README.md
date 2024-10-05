@@ -72,7 +72,7 @@ Developed by: Register Number*/
       
 	After this you can see the window like below 
 
-![Screenshot 2024-10-04 175913](https://github.com/user-attachments/assets/399fa413-5b87-4f88-b52a-710abacb08e1)
+
 	To Launch Simulation tool 
 
 •	linux:/> nclaunch -new& // “-new” option is used for invoking NCVERILOG for the first time for any design 
@@ -83,14 +83,16 @@ or
 
 	It will invoke the nclaunch window for functional simulation we can compile,elaborate and simulate it using Multiple Step .
 
-![Screenshot 2024-10-04 180019](https://github.com/user-attachments/assets/8668ef31-8cd6-4c2f-9b27-40f996892fc0)
+![image](https://github.com/user-attachments/assets/d31e2413-5c80-440d-a027-23bc6bff2100)
+
 
 
 	Select Multiple Step and then select “Create cds.lib File” .
 
 	Click the cds.lib file and save the file by clicking on Save option 
 
-![Screenshot 2024-10-04 180117](https://github.com/user-attachments/assets/19352130-16a1-4357-af7a-72c64c04ec95)
+![image](https://github.com/user-attachments/assets/cf34854a-c2e1-457d-b297-8e8ad0764276)
+
 
 
 	Save cds.lib file and select the correct option for cds.lib file format based on the HDL Language and Libraries used. 
@@ -103,7 +105,8 @@ or
 
 
 
-![Screenshot 2024-10-04 180144](https://github.com/user-attachments/assets/86be7465-6976-4d7d-80a3-4eb29ddf7080)
+![image](https://github.com/user-attachments/assets/ed5430ac-24a4-4571-b45d-b3412335d84e)
+
 
 
 
@@ -115,7 +118,8 @@ or
 
 	To perform the function simulation, the following three steps are involved Compilation, Elaboration and Simulation. 
 
-![Screenshot 2024-10-04 180317](https://github.com/user-attachments/assets/fc49b405-7eea-48a1-b5d8-48acc52ac1fd)
+![image](https://github.com/user-attachments/assets/56ecc66e-952d-4c34-9e6c-aa9d2f958d86)
+
 
 
 ## Step 1: Compilation:– Process to check the correct Verilog language syntax and usage 
@@ -135,7 +139,8 @@ i.e Cadence IES command for compile: ncverilog +access+rwc -compile fa.v
 
 Worklib is the directory where all the compiled codes are stored while Snapshot will have output of elaboration which in turn goes for simulation
 
-![Screenshot 2024-10-04 180228](https://github.com/user-attachments/assets/a14c6819-bec9-4cbd-97e1-f1ef4efb3741)
+![image](https://github.com/user-attachments/assets/e099d872-3c27-4665-9225-ecab0824a460)
+
 	After compilation it will come under worklib you can see in right side window
 
 	Select the test bench and compile it. It will come under worklib. Under Worklib you can see the module and test-bench. 
@@ -157,7 +162,8 @@ i.e Cadence IES command for compile: ncverilog +access+rwc -compile fa.v
    
 	After elaboration the file will come under snapshot. Select the test bench and elaborate it.
 
-![Screenshot 2024-10-04 180317](https://github.com/user-attachments/assets/75d10638-b3d5-4038-bd4d-432172598260)
+![image](https://github.com/user-attachments/assets/e810b121-e27d-4488-a135-f8ac9dab8993)
+
 
 ## Step 3: Simulation: – Simulate with the given test vectors over a period of time to observe the output behaviour. 
 
@@ -169,12 +175,13 @@ i.e Cadence IES command for compile: ncverilog +access+rwc -compile fa.v
 
 	Steps for simulation – Run the simulation command with simulator options
 
-![Screenshot 2024-10-04 180411](https://github.com/user-attachments/assets/a52a64bc-a2cb-43b7-8884-248512f356f8)
+![image](https://github.com/user-attachments/assets/b97025bd-8d3f-44d4-93ad-6b4704101eea)
 
-![Screenshot 2024-10-04 180450](https://github.com/user-attachments/assets/ce5dcf19-178e-41c2-abff-71fce4757d2a)
+![image](https://github.com/user-attachments/assets/d8acd465-24b0-4930-a503-79c5139081c7)
 
 
-![Screenshot 2024-10-04 180522](https://github.com/user-attachments/assets/83e82bd9-5b9f-45b6-9635-f34cfed860fe)
+![image](https://github.com/user-attachments/assets/bebdc872-fa60-4605-b60f-939eba870f04)
+
 
 
 
