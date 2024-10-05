@@ -72,8 +72,7 @@ Developed by: Register Number*/
       
 	After this you can see the window like below 
 
-### Fig 3:Invoke the Cadence Environment
-
+![Screenshot 2024-10-04 175913](https://github.com/user-attachments/assets/399fa413-5b87-4f88-b52a-710abacb08e1)
 	To Launch Simulation tool 
 
 •	linux:/> nclaunch -new& // “-new” option is used for invoking NCVERILOG for the first time for any design 
@@ -84,7 +83,8 @@ or
 
 	It will invoke the nclaunch window for functional simulation we can compile,elaborate and simulate it using Multiple Step .
 
-### Fig 4:Setting Multi-step simulation
+![Screenshot 2024-10-04 180019](https://github.com/user-attachments/assets/8668ef31-8cd6-4c2f-9b27-40f996892fc0)
+
 
 	Select Multiple Step and then select “Create cds.lib File” .
 
