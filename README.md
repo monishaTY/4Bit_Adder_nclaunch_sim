@@ -57,8 +57,39 @@ Note : File name should be with HDL Extension
 
 •	fa_4bit_test.v → Test bench 
 
-*/Program to design 4 bit adder by instantiating 1 bit Full adder.also add test bench program */
-Developed by: Register Number*/
+module full_adder(A,B,CIN,S,COUT);
+input A,B,CIN;
+output S,COUT;
+assign S=A^B^CIN;
+assign COUT=(A&B) | (CIN&(A^B));
+endmodule
+
+module fulladd_4bit(A,B,C0,S,C4);
+input [3:0] A,B;
+input C0;
+output [3:0] S;
+output C4;
+wire C1,C2,C3;
+full_adder fa0 (A[0],B[0],C0,S[0],C1);
+full_adder fa1 (A[1],B[1],C1,S[1],C2);
+full_adder fa2 (A[2],B[2],C2,S[2],C3);
+full_adder fa3 (A[3],B[3],C3,S[3],C4);
+endmodule
+
+module test_4bit;
+reg [3:0] A;
+reg [3:0] B; reg C0;
+wire [3:0] S; wire C4;
+fulladd_4bit dut (A,B,C0,S,C4);
+initial 
+begin
+A=4'b0011;B=4'b0011;C0=1'b0;
+#10;  A=4'b1011;B=4'b0111;C0=1'b1;
+#10; A=4'b1111;B=4'b1111;C0=1'b1;
+#10;
+end initial
+#50 $finish;
+endmodule
 
 ## Functional Simulation: 
 
@@ -83,7 +114,8 @@ or
 
 	It will invoke the nclaunch window for functional simulation we can compile,elaborate and simulate it using Multiple Step .
 
-![image](https://github.com/user-attachments/assets/d31e2413-5c80-440d-a027-23bc6bff2100)
+![image](https://github.com/user-attachments/assets/7cbe23dd-a4ae-42c8-97ca-c61181c6c474)
+
 
 
 
@@ -91,7 +123,7 @@ or
 
 	Click the cds.lib file and save the file by clicking on Save option 
 
-![image](https://github.com/user-attachments/assets/cf34854a-c2e1-457d-b297-8e8ad0764276)
+![image](https://github.com/user-attachments/assets/c800f64f-9838-402b-9bab-9c3cff957707)
 
 
 
@@ -103,9 +135,9 @@ or
 
 •	A Click “OK” in the “nclaunch: Open Design Directory” window as shown in below figure 
 
+![image](https://github.com/user-attachments/assets/71510a2e-1ee8-4c30-bb38-81ef491252d1)
 
 
-![image](https://github.com/user-attachments/assets/ed5430ac-24a4-4571-b45d-b3412335d84e)
 
 
 
@@ -118,7 +150,7 @@ or
 
 	To perform the function simulation, the following three steps are involved Compilation, Elaboration and Simulation. 
 
-![image](https://github.com/user-attachments/assets/3ff13f30-0665-45dd-b40f-c3a27efcda7a)
+![image](https://github.com/user-attachments/assets/540c0c9a-00be-413a-b732-98a171c9d994)
 
 
 
@@ -139,7 +171,9 @@ i.e Cadence IES command for compile: ncverilog +access+rwc -compile fa.v
 
 Worklib is the directory where all the compiled codes are stored while Snapshot will have output of elaboration which in turn goes for simulation
 
-![image](https://github.com/user-attachments/assets/f32dc5e2-e766-4f92-94d0-38508d2abcab)
+
+
+![image](https://github.com/user-attachments/assets/0b226ed0-7468-49f1-a11c-0523b680169f)
 
 
 	After compilation it will come under worklib you can see in right side window
